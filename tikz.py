@@ -1,4 +1,4 @@
-# pytikz v0.12
+# pytikz v0.13
 # A simple Python -> TikZ wrapper.
 # See main() for sample usage.
 #
@@ -33,14 +33,12 @@ def format_pos(pos, coord='abs'):
 
     return coord_type + str(pos)
 
-
 def to_command(func):
     @wraps(func)
     def wrapped(*args, **kwargs):
         return func(*args, **kwargs)
 
     return wrapped
-
 
 class Path(object):
     def __init__(self, style=''):
@@ -196,7 +194,6 @@ class Picture(object):
 
         return c
 
-
 def main():
     pic = Picture()
 
@@ -222,7 +219,7 @@ def main():
     with pic.path('fill, color=blue') as draw:
         draw.at(pointC).circle(0.3)
 
-    print pic.make()
+    print(pic.make())
 
 
 if __name__ == '__main__':
