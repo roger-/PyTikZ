@@ -25,7 +25,7 @@ with pic.path('fill') as fill:
     for pos in circle_pos:
         fill.at(pos).circle(circle_size)
 
-print pic.make()
+print(pic.make())
 ```
 
 # License
